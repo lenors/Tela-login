@@ -8,16 +8,16 @@ const Login = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("E-mail:", username); // Exibe o e-mail no console
-    console.log("Senha:", password); // Exibe a senha no console
+
     console.log("Envio do formulário concluído!");
+    alert(`Usuário: ${username} Senha: ${password}`);
   };
 
   return (
     <div className="container">
       <form onSubmit={handleSubmit}>
         <h1>Acesse o Sistema</h1>
-        <div>
+        <div className="input-field">
           <input
             type="email"
             placeholder="E-mail"
@@ -25,7 +25,7 @@ const Login = () => {
           />
           <FaUser className="icon" />
         </div>
-        <div>
+        <div className="input-field">
           <input
             type="password"
             placeholder="Senha do Usuario"
@@ -42,7 +42,7 @@ const Login = () => {
         </div>
         <button type="submit">Entrar</button> {/* Botão de submit */}
       </form>
-      <div className="singup-linl">
+      <div className="singup-link">
         <p>
           Nao tem uma conta? <a href="#">Registre-se </a>
         </p>
